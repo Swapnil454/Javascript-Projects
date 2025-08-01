@@ -1,0 +1,90 @@
+ <!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <i class="fas fa-paper-plane"></i>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter Your Full Name">
+            </div>
+
+            <div class="input-group">
+                <label>Phone No.</label>
+                <input type="tel" placeholder="000 000 0000">
+            </div>
+
+            <div class="input-group">
+                <label>Email Id</label>
+                <input type="email" placeholder="Enter Email">
+            </div>
+
+            <div class="input-group"></div>
+                <label>Your Massage</label>
+                <input rows="5" placeholder="Enter Your Massage">
+            </div>
+
+            <button>Submit</button>
+
+        </form>
+    </div>
+    
+    <script src="form.js"></script>
+    
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <i class="fas fa-paper-plane"></i>
+
+            <div class="input-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" onkeyup="validateName()" name="full-name" placeholder="Enter Your Full Name" >
+                <span id="name-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone No.</label>
+                <input type="tel" id="phone" onkeyup="validatePhone()" name="phone" placeholder="000 000 0000" >
+                <span id="phone-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Id</label>
+                <input type="email" id="email" onkeyup="validateEmail()" name="email" placeholder="Enter Email" >
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" onkeyup="validateassage()" name="message" rows="5" placeholder="Enter Your Message" ></textarea>
+                <span id="message-error"></span>
+            </div>
+            
+            <button onclick="return validaForm()">Submit</button>
+            <span id="submit-error"></span>
+
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
